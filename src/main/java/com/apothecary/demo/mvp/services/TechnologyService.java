@@ -41,6 +41,6 @@ public class TechnologyService {
         if (technology.isPresent())
             return technology.get();
         else
-            throw new NotFoundException(String.format("Prescription with %s id does not exist", id));
+            throw new NotFoundException(String.format("Technology with %s id does not exist", id));
     }
 }
