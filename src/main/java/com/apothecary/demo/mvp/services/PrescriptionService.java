@@ -26,10 +26,6 @@ public class PrescriptionService {
         return repository.findAll();
     }
 
-    //request 3
-    @Transactional
-    public List<Object[]> getTopDrugs(){
-        return repository.getTopDrugs(); }
 
     @Transactional
     public Prescription savePrescription(Prescription prescription) {

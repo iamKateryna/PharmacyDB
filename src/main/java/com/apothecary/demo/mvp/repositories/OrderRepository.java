@@ -31,10 +31,6 @@ public interface OrderRepository extends JpaRepository<Order, Integer>{
     @Query(value = "select count(*) from orders where orders.available= false", nativeQuery = true)
     Integer getNumPendingOrders();
 
-    //request 4
-    //@Query(value = "select * from orders where drug.drugs_types = :drugsTypes", nativeQuery = true)
-    //List<Order> getTopOrdersByDrugsTypes(@Param("drugsTypes") DrugsTypes drugsTypes);
-
     //request 8
     @Query(value = "select * from orders where orders.processed= true", nativeQuery = true)
     List<Order> getProcessedOrders();

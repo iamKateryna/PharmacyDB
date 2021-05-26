@@ -26,12 +26,6 @@ public class DrugController {
         return ResponseEntity.ok(drugService.findAll());
     }
 
-    //request 11
-    @GetMapping("no-tech")
-    public ResponseEntity<List<Object[]>> getDrugsInfoNoTechnology() {
-        return ResponseEntity.ok(drugService.getDrugsInfoNoTechnology());
-    }
-
 
     @GetMapping("{id}")
     public ResponseEntity<Drug> getDrugById(@PathVariable int id) {

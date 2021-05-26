@@ -16,9 +16,6 @@ public interface StorageRepository extends JpaRepository<Storage, Integer>{
     @Query(value = "select * from storage where storage.critical_amount < storage.amount and abs(storage.amount - storage.critical_amount) <=3 ", nativeQuery = true)
     List<Storage> getMinimalComponents();
 
-    //request 9 - 50/50
-    @Query(value = "select storage.component_name, storage.drug_id from storage, orders where orders.processed = true and storage.critical_amount > storage.amount  ", nativeQuery = true)
-    List<Object[]> getMissingComponents();
 
 
 }

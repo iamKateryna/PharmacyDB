@@ -32,10 +32,6 @@ public class StorageService {
     public List<Storage> getMinimalComponents(){
         return repository.getMinimalComponents(); }
 
-    //request 9
-    @Transactional
-    public List<Object[]> getMissingComponents(){
-        return repository.getMissingComponents(); }
 
     @Transactional
     public List<Storage> findAll() {

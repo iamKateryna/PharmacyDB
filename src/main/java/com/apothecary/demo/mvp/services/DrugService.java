@@ -28,11 +28,6 @@ public class DrugService {
     }
 
     @Transactional
-    public List<Object[]> getDrugsInfoNoTechnology() {
-        return repository.getDrugsInfoNoTechnology();
-    }
-
-    @Transactional
     public Drug saveDrug(Drug drug) {
         return repository.save(drug);
     }

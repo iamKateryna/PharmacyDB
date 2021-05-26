@@ -43,11 +43,6 @@ public class StorageController {
         return ResponseEntity.ok(storageService.getMinimalComponents());
     }
 
-    //request 9 - works
-    @GetMapping("missing")
-    public ResponseEntity<List<Object[]>> getMissingComponents(){
-        return ResponseEntity.ok(storageService.getMissingComponents());
-    }
 
     @GetMapping("{id}")
     public ResponseEntity<Storage> getStorageById(@PathVariable int id) {

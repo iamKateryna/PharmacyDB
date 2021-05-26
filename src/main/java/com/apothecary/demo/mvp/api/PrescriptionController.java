@@ -29,11 +29,7 @@ public class PrescriptionController {
         return ResponseEntity.ok(prescriptionService.findAll());
     }
 
-    //request 3
-    @GetMapping("top10")
-    public ResponseEntity<List<Object[]>> getTopDrugs(){
-        return ResponseEntity.ok(prescriptionService.getTopDrugs());
-    }
+
 
     @GetMapping("{id}")
     public ResponseEntity<Prescription> getPrescriptionById(@PathVariable int id) {

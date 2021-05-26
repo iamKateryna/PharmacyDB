@@ -11,7 +11,4 @@ import java.util.List;
 
 public interface DrugRepository extends JpaRepository<Drug, Integer>{
 
-    //request 11
-    @Query(value = "select drug.name, drug.price, technology.technology_types from drug, technology where technology.technology_types = 3 ", nativeQuery = true)
-    List<Object[]> getDrugsInfoNoTechnology();
 }

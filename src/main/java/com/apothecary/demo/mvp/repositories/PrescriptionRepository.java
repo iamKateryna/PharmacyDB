@@ -10,7 +10,4 @@ import java.util.UUID;
 
 public interface PrescriptionRepository extends JpaRepository<Prescription, Integer> {
 
-    //request 3
-    @Query(value = "select drug.name from drug, prescription order by prescription.amount desc limit 10", nativeQuery = true)
-    List<Object[]> getTopDrugs();
 }
